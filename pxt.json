@@ -1,5 +1,5 @@
 {
-    "name": "Tilemap-to-image",
+    "name": "Tilemaptoimage",
     "description": "",
     "dependencies": {
         "device": "*"
