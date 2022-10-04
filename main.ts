@@ -1,4 +1,4 @@
-namespace redrawImg {
+namespace tilemapToImg {
     //% block
     //% block="generate image From current tilemap to image $outputImage"
     export function GenerateImage(outputImage: any) {
