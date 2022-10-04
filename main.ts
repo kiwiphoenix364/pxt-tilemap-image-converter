@@ -1,7 +1,7 @@
 namespace tilemapToImg {
     //% block
     //% block="generate image from  tilemap $inputTilemap to image $outputImage"
-    export function GenerateImage(inputTilemap: any, outputImage: any) {
+    export function generateImage(inputTilemap: any, outputImage: any) {
         let tilemap1 = inputTilemap
         let tilemapLoaded = false
         if (game.currentScene().tileMap) {
