@@ -2,14 +2,20 @@ namespace tilemapToImg {
     //% block
     //% block="generate image from  tilemap $inputTilemap to image $outputImage"
     export function GenerateImage(inputTilemap: any, outputImage: any) {
-        let tilemap = game.currentScene().tileMap.data
+        if (game.currentScene().tileMap) {
+            let tilemap = game.currentScene().tileMap.data
+        }
         tiles.setCurrentTilemap(inputTilemap)
         for (let x = 0; x < 255; x++) {
             for (let y = 0; y < 255; y++) {
                 drawImg(x * 16, y * 16, tiles.tileImageAtLocation(tiles.getTileLocation(x, y)), outputImage)
             }
         }
-        tiles.setCurrentTilemap(tilemap)
+        if (game.currentScene().tileMap) {
+            tiles.setCurrentTilemap(tilemap)
+        } else {
+            game.currentScene().tileMap.setData(undefined);
+        }
     }
     function drawImg(x: number, y: number, startImg: Image, targetImg: Image) {
         for (let xIdx = 0; xIdx < 16; xIdx++) {
