@@ -1,10 +1,10 @@
 namespace tilemapToImg {
     //% block
-    //% block="generate image From current tilemap to image $outputImage"
-    export function GenerateImage(outputImage: any) {
+    //% block="generate image from  tilemap $inputTilemap to image $outputImage"
+    export function GenerateImage(inputTilemap: any, outputImage: any) {
         for (let x = 0; x < 255; x++) {
             for (let y = 0; y < 255; y++) {
-                drawImg(x * 16, y * 16, tiles.tileImageAtLocation(tiles.getTileLocation(x, y)), outputImage)
+                drawImg(x * 16, y * 16, inputTilemap.tileImageAtLocation(inputTilemap.getTileLocation(x, y)), outputImage)
             }
         }
     }
