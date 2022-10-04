@@ -1,7 +1,7 @@
 namespace redrawImg {
     //% block
     //% block="generate image From tilemap $selectedTilemap to image $outputImage"
-    export function GenerateImage(outputImage: Image, selectedTilemap: any) {
+    export function GenerateImage(outputImage: any, selectedTilemap: any) {
         for (let x = 0; x < 255; x++) {
             for (let y = 0; y < 255; y++) {
                 drawImg(x * 16, y * 16, selectedTilemap.tileImageAtLocation(selectedTilemap.getTileLocation(x, y)), outputImage)
