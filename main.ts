@@ -4,7 +4,7 @@ namespace redrawImg {
     export function GenerateImage(outputImage: any, selectedTilemap: any) {
         for (let x = 0; x < 255; x++) {
             for (let y = 0; y < 255; y++) {
-                drawImg(x * 16, y * 16, selectedTilemap.tileImageAtLocation(selectedTilemap.getTileLocation(x, y)), outputImage)
+                drawImg(x * 16, y * 16, tiles.tileImageAtLocation(tiles.getTileLocation(x, y)), outputImage)
             }
         }
     }
